@@ -1,4 +1,4 @@
-public class Insertion_sort {
+public class Selection_sort {
     public static void main(String args[])
     {
         int arr[] = {7,8,5,6,3,4};
