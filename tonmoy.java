@@ -7,14 +7,28 @@ public class tonmoy {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
-        int a=1,b=1,c=1;
-        for(int i=1; i<=n; i++)
+        int[] tk = new int[n];
+        for(int i=0; i<n; i++)
         {
-          System.out.println(a+" "+b+" "+c); 
-          b=a+a;
-          c=a*b;
-          System.out.println(a+" "+b+" "+a*b);
-          a++;
+            tk[i] = sc.nextInt();
+        }
+
+        for(int i=0; i<n-1; i++)
+        {
+            for(int j=0; j<n-i-1; j++)
+            {
+                if(tk[j]>tk[j+1])
+                    {
+                        int t = tk[j];
+                        tk[j] = tk[j+1];
+                        tk[j+1] = t;
+                    } 
+            }
+        }
+
+        for(int i=0; i<n; i++)
+        {
+            System.out.print(tk[i]+" ");
         }
     }
 }
