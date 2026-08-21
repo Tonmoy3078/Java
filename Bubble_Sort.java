@@ -1,28 +1,35 @@
+import java.util.Scanner;
+
 public class Bubble_Sort {
     public static void main(String args[])
     {
 
-        int arr[] = {7,8,5,6,3,4};
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
 
-        //bubble sort
-        //time complexity = O(n^2);
-        for(int i=0; i<arr.length-1; i++)
+        int v[] = new int[n];
+
+        for(int i=0; i<n; i++)
         {
-            for(int j=0; j<arr.length-i-1; j++)
+            v[i] = sc.nextInt();
+        }
+
+        for(int i=0; i<n-1; i++)
+        {
+            for(int j=0; j<n-i-1; j++)
             {
-                if(arr[j]>arr[j+1])
-                {
-                    //swap
-                    int t = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1]=t;
-                }
+               if(v[j]>v[j+1])
+               {
+                 int t = v[j];
+                v[j] = v[j+1];
+                v[j+1] = t;
+               }
             }
         }
 
-        for(int i=0; i<arr.length; i++)
+        for(int i=0; i<n; i++)
         {
-            System.out.println(arr[i]);
+            System.out.print(v[i]+" ");
         }
     }
 }
