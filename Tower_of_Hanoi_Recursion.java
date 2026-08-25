@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
-public class Tower_of_Hanoi_Recursion {
+public class Tower_of_Hanoi_Recursion
+ {
    public static void tower_of_hanoi(int n,String src,String helper,String dest)
    {
       if(n==1)
